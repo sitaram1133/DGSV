@@ -1,0 +1,23 @@
+<resources>
+    <string name="app_name">DGSV</string>
+    <string name="digambar_ganesh_saraf_vidyalaya_sangamner">Digambar Ganesh Saraf Vidyalaya, Sangamner</string>
+    <string name="enter_the_exam_seat_number">Enter the Exam Seat number</string>
+    <string name="start_exam">Start Exam</string>
+    <string name="vinayen_shobhate_vidya">Vinayen Shobhate Vidya</string>
+    <string name="exam_portal">Exam portal</string>
+    <string name="examtime">ExamTime :</string>
+
+
+    <string-array name="subjects">
+        <item>Select Sub </item>
+        <item> Sanskrit </item>
+        <item> Marathi </item>
+        <item> English </item>
+        <item> Mathematics</item>
+        <item> Science </item>
+        <item> Geography </item>
+        <item> Hindi </item>
+        <item> History </item>
+        <item> Economics </item>
+    </string-array>
+</resources>

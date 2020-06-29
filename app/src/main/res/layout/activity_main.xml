@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="my.client.dgsv.MainActivity">
+
+    <TextView
+        android:textAllCaps="true"
+        android:layout_margin="20dp"
+        android:textStyle="bold"
+        android:textSize="24sp"
+        android:layout_marginTop="30dp"
+        android:layout_gravity="center"
+        android:textAlignment="center"
+        android:id="@+id/textview"
+        android:text="Digamber Ganesh Saraf Vidyalaya, Sangamner"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal" />
+
+    <TextView
+        android:layout_margin="10dp"
+        android:textAlignment="center"
+        android:id="@+id/textSlogan"
+        android:text="@string/vinayen_shobhate_vidya"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal" />
+
+   <LinearLayout
+       android:background="@drawable/btn_design"
+       android:padding="15dp"
+       android:layout_marginHorizontal="50dp"
+       android:orientation="vertical"
+       android:layout_width="match_parent"
+       android:layout_height="wrap_content">
+
+       <TextView
+           android:textStyle="bold"
+           android:layout_marginTop="20dp"
+           android:textAlignment="center"
+           android:text="@string/exam_portal"
+           android:layout_width="match_parent"
+           android:layout_height="wrap_content"
+           android:gravity="center_horizontal" />
+
+       <Spinner
+           android:layout_margin="10dp"
+           android:background="@drawable/carddesign"
+           android:layout_marginTop="35dp"
+           android:layout_marginHorizontal="20dp"
+           android:id="@+id/spinner"
+           android:padding="10dp"
+           android:layout_width="match_parent"
+           android:layout_height="40dp"/>
+
+       <EditText
+           android:inputType="numberDecimal"
+           android:layout_marginTop="20dp"
+           android:layout_marginHorizontal="20dp"
+           android:drawableStart="@drawable/ic_baseline_assignment_ind_24"
+           android:drawablePadding="10dp"
+           android:hint="Exam Seat No."
+           android:id="@+id/edittext"
+           android:layout_width="match_parent"
+           android:layout_height="wrap_content"
+           android:drawableLeft="@drawable/ic_baseline_assignment_ind_24" />
+       <Button
+           android:textColor="@android:color/white"
+           android:textStyle="bold"
+           android:padding="5dp"
+           android:background="@drawable/btn_design_dark"
+           android:id="@+id/btnstart"
+           android:layout_marginTop="20dp"
+           android:layout_gravity="center"
+           android:text="@string/start_exam"
+           android:layout_width="wrap_content"
+           android:layout_height="wrap_content"/>
+   </LinearLayout>
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <TextView
+            android:layout_marginTop="35dp"
+            android:textAlignment="center"
+            android:text="@string/examtime"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal" />
+
+        <TextView
+            android:layout_marginTop="20dp"
+            android:textAlignment="center"
+            android:text="Notes:\n Please do not use calculator."
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal" />
+    </LinearLayout>
+</LinearLayout>
