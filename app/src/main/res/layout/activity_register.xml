@@ -1,0 +1,159 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ScrollView
+        android:scrollbars="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:id="@+id/seclayout"
+            android:layout_margin="15dp"
+            android:layout_marginHorizontal="30dp"
+            android:padding="9dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+            <TextView
+                android:textSize="18sp"
+                android:textAlignment="center"
+                android:text="@string/enter_following_details"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_horizontal" />
+
+            <EditText
+                android:layout_marginTop="10dp"
+                android:drawablePadding="10dp"
+                android:drawableStart="@drawable/userico"
+                android:id="@+id/firstname"
+                android:hint="First Name"
+                android:inputType="text"
+                android:maxLength="20"
+                android:layout_width="180dp"
+                android:layout_height="wrap_content"
+                android:drawableLeft="@drawable/userico" />
+            <EditText
+                android:layout_marginTop="10dp"
+                android:drawablePadding="10dp"
+                android:drawableStart="@drawable/userico"
+                android:id="@+id/middlename"
+                android:hint="Middle Name"
+                android:inputType="text"
+                android:maxLength="20"
+                android:layout_width="180dp"
+                android:layout_height="wrap_content"
+                android:drawableLeft="@drawable/userico" />
+            <EditText
+                android:layout_marginTop="10dp"
+                android:drawablePadding="10dp"
+                android:drawableStart="@drawable/userico"
+                android:id="@+id/lastname"
+                android:hint="@string/lastname"
+                android:inputType="text"
+                android:maxLength="20"
+                android:layout_width="180dp"
+                android:layout_height="wrap_content"
+                android:drawableLeft="@drawable/userico" />
+            <EditText
+                android:layout_marginTop="10dp"
+                android:drawablePadding="10dp"
+                android:drawableStart="@drawable/organization"
+                android:id="@+id/organization"
+                android:inputType="text"
+                android:hint="@string/organization_school"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:drawableLeft="@drawable/organization" />
+
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_gravity="center"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <EditText
+                    android:layout_marginTop="10dp"
+                    android:drawablePadding="10dp"
+                    android:drawableStart="@drawable/ic_baseline_location_on_24"
+                    android:id="@+id/address"
+                    android:inputType="text"
+                    android:hint="Address"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:drawableLeft="@drawable/ic_baseline_location_on_24" />
+
+                <Button
+                    android:elevation="9dp"
+                    android:background="@drawable/ic_baseline_location_searching_24"
+                    android:gravity="center"
+                    android:layout_margin="5dp"
+                    android:layout_gravity="center"
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"/>
+
+            </LinearLayout>
+
+
+
+            <EditText
+                android:layout_marginTop="10dp"
+                android:drawablePadding="10dp"
+                android:drawableStart="@drawable/organization"
+                android:id="@+id/rollno"
+                android:inputType="numberDecimal"
+                android:maxLength="3"
+                android:hint="Roll Number"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:drawableLeft="@drawable/organization" />
+
+            <LinearLayout
+                android:layout_gravity="top"
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <EditText
+                    android:drawableStart="@drawable/standerd"
+                    android:drawablePadding="10dp"
+                    android:hint="@string/standerd_class"
+                    android:id="@+id/classid"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:drawableLeft="@drawable/standerd" />
+                <TextView
+                    android:gravity="top"
+                    android:layout_gravity="top"
+                    android:text="@string/th"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"/>
+
+
+            </LinearLayout>
+
+
+            <Button
+                android:id="@+id/btnsubmit"
+                android:layout_marginTop="15dp"
+                android:text="Submit"
+                android:layout_gravity="center"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+
+
+
+
+            <TextView
+                android:id="@+id/alertmessage"
+                android:layout_marginTop="30dp"
+                android:textAlignment="center"
+                android:layout_gravity="center"
+                android:textColor="@android:color/holo_red_dark"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

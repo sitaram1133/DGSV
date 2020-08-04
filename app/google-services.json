@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "133070158478",
+    "firebase_url": "https://student-dgsv.firebaseio.com",
+    "project_id": "student-dgsv",
+    "storage_bucket": "student-dgsv.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:133070158478:android:2d4f393c55ba10d24de7df",
+        "android_client_info": {
+          "package_name": "my.client.dgsv"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "133070158478-dmph0l3l22e9jl8me5hbuthcfq3hj2tb.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCAjzDkaWrby2aJZ9C7jlC0h63Ryn8Qlig"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "133070158478-dmph0l3l22e9jl8me5hbuthcfq3hj2tb.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

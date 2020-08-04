@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="#F32B1334"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:elevation="9dp"
+        android:background="#2B1334"
+        android:layout_margin="20dp"
+        android:padding="24dp"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <ImageView
+                android:elevation="5dp"
+                android:layout_marginTop="25dp"
+                android:layout_gravity="center"
+                android:id="@+id/mayurico"
+                android:src="@drawable/mayur3"
+                android:layout_width="150dp"
+                android:layout_height="150dp"/>
+
+            <TextView
+                android:textSize="30sp"
+                android:textStyle="bold"
+                android:textColor="@android:color/white"
+                android:textAlignment="center"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_horizontal" />
+
+            <TextView
+                android:textSize="18sp"
+                android:textColor="@android:color/white"
+                android:textAlignment="center"
+
+
+                android:text="Enter Phone Number here to \n Login / Signup"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_horizontal" />
+
+        </LinearLayout>
+        <EditText
+            android:id="@+id/phoneid"
+            android:elevation="10dp"
+            android:drawablePadding="10dp"
+            android:drawableStart="@drawable/phoneico"
+            android:layout_marginTop="30dp"
+            android:padding="10dp"
+            app:counterEnabled="true"
+            app:counterMaxLength="10"
+            android:inputType="phone"
+            android:background="#1F032E"
+            android:hint="Enter Your Phone"
+            android:maxLines="1"
+            android:maxEms="10"
+            android:maxLength="10"
+            android:textColor="@android:color/white"
+            android:textColorHint="@android:color/white"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:drawableLeft="@drawable/phoneico" />
+
+        <Button
+            android:id="@+id/btnSubmit"
+            android:drawableEnd="@drawable/ic_baseline_send_24"
+            android:elevation="15dp"
+            android:text="Submit"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:drawableRight="@drawable/ic_baseline_send_24" />
+
+    </LinearLayout>
+
+
+
+</LinearLayout>

@@ -6,6 +6,43 @@
     <string name="vinayen_shobhate_vidya">Vinayen Shobhate Vidya</string>
     <string name="exam_portal">Exam portal</string>
     <string name="examtime">ExamTime :</string>
+    <string name="urja_a_samrudhi">Urja A Samrudhi</string>
+    <string name="urja_avm_samrudhi">urja</string>
+
+
+    <string name="hello_first_fragment">Hello first fragment</string>
+    <string name="hello_second_fragment">Hello second fragment. Arg: %1$s</string>
+    <string name="student_result">Student Result</string>
+    <string name="student_catelog">Student Catelog</string>
+    <string name="enter_the_following_details">Enter the following Details</string>
+    <string name="unit_test_ut">Unit Test (UT)</string>
+    <string name="class_test_ct">Class Test (CT)</string>
+    <string name="prelium_test_pt">Prelium Test ( PT )</string>
+    <string name="insert_quation_here">Insert Quation here...</string>
+    <string name="option1">Option1</string>
+    <string name="submit">Submit</string>
+    <string name="hi_there_thi_is_aljsya">Hi there thi is Aljsya</string>
+    <string name="no_internet_connection">No Internet Connection</string>
+    <string name="plase_check_intenet_connection_n_and">Please Check internet Connection\n and</string>
+    <string name="school_management_software">School Management Software</string>
+    <string name="suprempower_solution">SupremPower Solution</string>
+    <string name="enter_the_number_of_questions">Enter the Number of Questions</string>
+    <string name="username">Username</string>
+    <string name="phone">Phone</string>
+    <string name="organization_school">Organization / School</string>
+    <string name="standerd_class">Standerd / class</string>
+    <string name="th">th</string>
+    <string name="register_account">Register Account</string>
+    <string name="password">Password</string>
+    <string name="sign_in">Sign in</string>
+    <string name="favorites">favrate</string>
+    <string name="home">Home</string>
+    <string name="dashboard">Dashboard</string>
+    <string name="profile">Profile</string>
+    <string name="message">Message</string>
+    <string name="settings">Akshay</string>
+    <string name="enter_following_details">Enter following Details</string>
+    <string name="lastname">Lastname</string>
 
 
     <string-array name="subjects">
