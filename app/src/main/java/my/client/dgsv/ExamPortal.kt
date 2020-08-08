@@ -1,20 +1,27 @@
 package my.client.dgsv
 
 import android.annotation.SuppressLint
-import android.app.Activity
 import android.content.Context
 import android.content.Intent
 import android.content.SharedPreferences
 import android.net.ConnectivityManager
+import android.os.Build
 import android.os.Bundle
+import android.os.CountDownTimer
 import android.util.Log
+import android.view.Window
+import android.view.WindowManager
 import android.widget.RadioButton
 import android.widget.RadioGroup
+import android.widget.TextView
 import android.widget.Toast
+import androidx.annotation.RequiresApi
 import androidx.appcompat.app.AlertDialog
 import androidx.appcompat.app.AppCompatActivity
+import androidx.core.graphics.drawable.toDrawable
 import com.client.dgsv.R
 import kotlinx.android.synthetic.main.activity_exam_portal.*
+import kotlinx.android.synthetic.main.activity_phone.*
 import my.client.dgsv.services.CheckoutService
 import my.client.dgsv.services.ServiceBuilder
 import retrofit2.Call
@@ -25,7 +32,11 @@ import retrofit2.Response
 class ExamPortal : AppCompatActivity() {
     private val sharedPreferencesFile = "kotlinsharedpref"
     lateinit var context: Context
-
+    var START_MILLI_SECONDS = 60000L
+    lateinit var countdown_timer: CountDownTimer
+    var isRunning: Boolean = false;
+    var time_in_milli_seconds = 0L
+    var timeoutlog: Boolean = false
 
 
     private fun isNetworkAvailable(): Boolean {
@@ -37,13 +48,76 @@ class ExamPortal : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+        requestWindowFeature(Window.FEATURE_NO_TITLE)
+        this.getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN, WindowManager.LayoutParams.FLAG_FULLSCREEN)
         setContentView(R.layout.activity_exam_portal)
+        val sharedPreferences : SharedPreferences = this.getSharedPreferences(sharedPreferencesFile, Context.MODE_PRIVATE)
+        val sharedphonevalue = sharedPreferences.getString("phonenum","defaultname")
+        var countdown = sharedPreferences.getInt("countdown",0)
+        if (sharedphonevalue.equals("defaultname")){
+            val i = Intent(this@ExamPortal,MainActivity::class.java)
+            startActivity(i)
+            finish()
+        }
+        var START_MILLI_SECONDS = 60000L
+        lateinit var countdown_timer: CountDownTimer
+        var isRunning: Boolean = false;
+        var time_in_milli_seconds = 0L
         context = this
-        loadDestination()
+        time_in_milli_seconds = countdown.toLong() *60000L
+        if (!isNetworkAvailable()){
+            val intent = Intent(this@ExamPortal,NointernetActivity::class.java)
+            startActivity(intent)
+            finish()
+        }
+        startTimer(time_in_milli_seconds)
+        loadDestination(sharedphonevalue)
 
     }
 
-    private fun loadDestination() {
+    private fun startTimer(time_in_seconds: Long) {
+        countdown_timer = object : CountDownTimer(time_in_seconds, 1000) {
+            override fun onFinish() {
+                timeoutlog = true
+                btn_next.background = resources.getDrawable(R.drawable.redzone)
+            }
+
+            override fun onTick(p0: Long) {
+                time_in_milli_seconds = p0
+                updateTextUI(time_in_seconds)
+            }
+        }
+        countdown_timer.start()
+
+        isRunning = true
+    }
+
+
+    private fun updateTextUI(timeInSeconds: Long) {
+        val minute = (time_in_milli_seconds / 1000) / 60
+        val seconds = (time_in_milli_seconds / 1000) % 60
+        var halfval = timeInSeconds * 0.5
+        var onepot =  timeInSeconds * 0.25
+        var pot = timeInSeconds * 0.15
+        //Log.d("time in seconds",timeInSeconds.toString())
+        // Log.d("time_in_milli_seconds",time_in_milli_seconds.toString())
+        if (halfval > time_in_milli_seconds){
+            countid.background = resources.getDrawable(R.drawable.yellow_warning)
+        }
+        if (onepot > time_in_milli_seconds){
+            countid.background = resources.getDrawable(R.drawable.orangezone)
+        }
+        if (pot > time_in_milli_seconds){
+            countid.background = resources.getDrawable(R.drawable.redzone)
+        }
+        countid.text = "$minute:$seconds"
+    }
+
+
+
+
+
+    private fun loadDestination(sharedphonevalue: String?) {
         lateinit var destinationList: List<Question>
         val checkoutService = ServiceBuilder.buildService(
             CheckoutService::class.java)
@@ -52,7 +126,7 @@ class ExamPortal : AppCompatActivity() {
 //        filter["country"] = "India"
 //        filter["count"] = "1"
 
-        val requestCall = checkoutService.getCheckoutList(filter)
+        val requestCall = checkoutService.getCheckoutList(sharedphonevalue,filter)
 
         requestCall.enqueue(object : Callback<List<Question>> {
 
@@ -66,15 +140,11 @@ class ExamPortal : AppCompatActivity() {
                     // Your status code is in the range of 200's
                     var index = 0
                     destinationList = response.body()!!
+                    val totalQtn = destinationList.size
+                    sendQty(totalQtn)
                      Log.d("Data","Program has been initialized")
                     var score = 0
-
-                   /* Log.d("data", destinationList[index].Question)
-                    Log.d("data", destinationList[index].Option1)
-                    Log.d("data", destinationList[index].Option2)
-                    Log.d("data", destinationList[index].Option3)
-                    Log.d("data", destinationList[index].Option4)
-                    Log.d("data", destinationList[index].ans)*/
+                    //startTimer(time_in_milli_seconds)
                     Log.d("total Quations:", destinationList.size.toString())
                     DataLoader().getQuations(destinationList, index)
 
@@ -104,7 +174,7 @@ class ExamPortal : AppCompatActivity() {
                             }
                         }
 
-                        if (btn_next.text == "Finish"){
+                        if (btn_next.text == "Finish" || timeoutlog){
                             Log.d("Status","Exam Finished")
                             selection.setOnCheckedChangeListener { group, checkedId ->
                                 if(rg_choice.checkedRadioButtonId ==-1){
@@ -193,7 +263,13 @@ class ExamPortal : AppCompatActivity() {
         })
     }
 
-
+    private fun sendQty(totalQtn: Int) {
+        val sharedPreferences : SharedPreferences = this.getSharedPreferences(sharedPreferencesFile, Context.MODE_PRIVATE)
+        val editor: SharedPreferences.Editor =  sharedPreferences.edit()
+        editor.putInt("total",totalQtn)
+        editor.apply()
+        editor.commit()
+    }
 
 
     override fun onBackPressed() {

@@ -11,18 +11,48 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent">
 
-        <TextView
-            android:layout_marginHorizontal="15dp"
-            android:textSize="21sp"
-            android:text="Akshay"
-            android:textAlignment="textEnd"
-            android:layout_marginBottom="20dp"
-            android:id="@+id/tv_marks"
+        <LinearLayout
+            android:background="#E1DCD8"
+            android:elevation="9dp"
+            android:padding="10dp"
+            android:orientation="horizontal"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:gravity="end" />
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/countid"
+                android:drawableStart="@drawable/ic_baseline_alarm_24"
+                android:layout_gravity="center"
+                android:drawablePadding="10dp"
+                android:padding="10dp"
+                android:textSize="18sp"
+                android:text="00:00:00"
+                android:textColor="#082705"
+                android:background="@drawable/btn_design_dark_green"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:drawableLeft="@drawable/ic_baseline_alarm_24" />
+
+
+            <TextView
+                android:layout_marginHorizontal="15dp"
+                android:textSize="21sp"
+                android:text="Akshay"
+                android:textAlignment="textEnd"
+                android:layout_marginBottom="20dp"
+                android:id="@+id/tv_marks"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="end" />
+        </LinearLayout>
+
+
 
         <TextView
+            android:elevation="5dp"
+            android:background="#fff"
+            android:padding="10dp"
+            android:layout_marginTop="35dp"
             android:textSize="21sp"
             android:layout_marginBottom="20dp"
             android:id="@+id/tv_qustion"
@@ -30,25 +60,42 @@
             android:layout_height="wrap_content"/>
         
         <RadioGroup
+
             android:id="@+id/rg_choice"
             android:layout_width="match_parent"
             android:layout_height="wrap_content">
             <RadioButton
+                android:paddingHorizontal="10dp"
+                android:layout_margin="5dp"
+                android:elevation="5dp"
+                android:background="#fff"
                 android:textSize="18sp"
                 android:id="@+id/rd_choice1"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"/>
             <RadioButton
+                android:paddingHorizontal="10dp"
+                android:layout_margin="5dp"
+                android:elevation="5dp"
+                android:background="#fff"
                 android:textSize="18sp"
                 android:id="@+id/rd_choice2"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"/>
             <RadioButton
+                android:paddingHorizontal="10dp"
+                android:layout_margin="5dp"
+                android:elevation="5dp"
+                android:background="#fff"
                 android:textSize="18sp"
                 android:id="@+id/rd_choice3"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"/>
             <RadioButton
+                android:paddingHorizontal="10dp"
+                android:layout_margin="5dp"
+                android:elevation="5dp"
+                android:background="#fff"
                 android:textSize="18sp"
                 android:id="@+id/rd_choice4"
                 android:layout_width="wrap_content"

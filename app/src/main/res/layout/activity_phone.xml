@@ -63,23 +63,41 @@
             android:maxLines="1"
             android:maxEms="10"
             android:maxLength="10"
+
             android:textColor="@android:color/white"
             android:textColorHint="@android:color/white"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:drawableLeft="@drawable/phoneico" />
 
+
+
         <Button
+            android:layout_marginTop="50dp"
+            android:paddingHorizontal="25dp"
             android:id="@+id/btnSubmit"
+            android:background="#5A4E77"
             android:drawableEnd="@drawable/ic_baseline_send_24"
             android:elevation="15dp"
             android:text="Submit"
+            android:textColor="@android:color/white"
+            android:textAllCaps="false"
+            android:textSize="18sp"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:drawableRight="@drawable/ic_baseline_send_24" />
 
     </LinearLayout>
 
-
+<TextView
+    android:padding="5dp"
+    android:layout_margin="30dp"
+    android:textSize="15sp"
+    android:textAlignment="center"
+    android:text="SupremPower Solutions"
+    android:textColor="@android:color/white"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:gravity="center_horizontal" />
 
 </LinearLayout>

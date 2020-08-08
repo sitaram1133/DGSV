@@ -7,17 +7,29 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.os.CountDownTimer
 import android.util.Log
+import android.view.Window
+import android.view.WindowManager
 import android.widget.TextView
 import com.client.dgsv.R
 import com.google.android.gms.tasks.OnCompleteListener
 import com.google.android.gms.tasks.TaskExecutors
 import com.google.firebase.FirebaseException
 import com.google.firebase.auth.*
+import kotlinx.android.synthetic.main.activity_exam_portal.*
 import kotlinx.android.synthetic.main.activity_otp.*
 import java.util.*
 import java.util.concurrent.TimeUnit
 
 class OtpActivity : AppCompatActivity() {
+
+    lateinit var context: Context
+    var START_MILLI_SECONDS = 60000L
+    lateinit var countdown_timer: CountDownTimer
+    var isRunning: Boolean = false;
+    var time_in_milli_seconds = 0L
+    var timeoutlog: Boolean = false
+    var validationCall:Boolean = false
+
     //It is the verification id that will be sent to the user
     private var mVerificationId: String? = null
     private  var phone_trans: String? = null
@@ -29,23 +41,15 @@ class OtpActivity : AppCompatActivity() {
         setContentView(R.layout.activity_otp)
         val intent = intent
         val phone = intent.getStringExtra("phone")
-        Log.d("Phone",phone)
         if (phone.isEmpty() || phone.length < 10) {
            // phone_num!!.setError("Enter a valid mobile")
           //  phone_num!!.requestFocus()
         }else{
-            var counter = 0
+            var countdown = 1
+            time_in_milli_seconds = countdown.toLong() *60000L
             val counttime = findViewById<TextView>(R.id.counttime)
-            object : CountDownTimer(50000, 1000) {
-                override fun onTick(millisUntilFinished: Long) {
-                    counttime.text = counter.toString()
-                    counter++
-                }
-
-                override fun onFinish() {
-                    counttime.text = "Finished"
-                }
-            }.start()
+            startTimer(time_in_milli_seconds)
+            Log.d("Phone",phone)
             sendVerificationCode(phone)
             // val intent = Intent(this@Onetimepass, MainActivity::class.java)
             // intent.putExtra("mobile", phone)
@@ -54,11 +58,45 @@ class OtpActivity : AppCompatActivity() {
 
 
         btnpushcode.setOnClickListener {
-            val intent = Intent(this@OtpActivity,RegisterActivity::class.java)
-            startActivity(intent)
-            finish()
+            if (validationCall){
+                val intent = Intent(this@OtpActivity,RegisterActivity::class.java)
+                startActivity(intent)
+                finish()
+            }else
+            {
+                val intent = Intent(this@OtpActivity,RegisterActivity::class.java)
+                startActivity(intent)
+                finish()
+            }
         }
 
+    }
+
+
+    private fun startTimer(time_in_seconds: Long) {
+        countdown_timer = object : CountDownTimer(time_in_seconds, 1000) {
+            override fun onFinish() {
+                timeoutlog = true
+                val intent = Intent(this@OtpActivity,Splashnew::class.java)
+               // startActivity(intent)
+               // finish()
+            }
+
+            override fun onTick(p0: Long) {
+                time_in_milli_seconds = p0
+                updateTextUI(time_in_seconds)
+            }
+        }
+        countdown_timer.start()
+
+        isRunning = true
+    }
+
+    private fun updateTextUI(timeInSeconds: Long) {
+        val minute = (time_in_milli_seconds / 1000) / 60
+        val seconds = (time_in_milli_seconds / 1000) % 60
+
+        counttime.text = seconds.toString()
     }
 
     private fun sendVerificationCode(phone: String?) {
@@ -77,7 +115,7 @@ class OtpActivity : AppCompatActivity() {
                 //  otp_num = editTextCode!!.text.toString().trim()
                 //Getting the code sent by SMS
                 val code = phoneAuthCredential.smsCode
-
+                Log.d("data","Here We Go!")
                 //sometime the code is not detected automatically
                 //in this case the code will be null
                 //so user has to manually enter the code
@@ -132,6 +170,7 @@ class OtpActivity : AppCompatActivity() {
             override fun onVerificationFailed(e: FirebaseException) {
                 //Toast.makeText(this@VerifyPhoneActivity, e.message, Toast.LENGTH_LONG).show()
                 Log.d("tagline","Verification Failed")
+                onResponsesuccess(phone_trans)
             }
 
             override fun onCodeSent(
@@ -145,7 +184,7 @@ class OtpActivity : AppCompatActivity() {
             }
         }
 
-    private fun onResponsesuccess(phoneTrans: String?) {
+    private fun onResponsesuccess(phoneTrans: String?): Boolean {
         val sharedPreferences : SharedPreferences = this.getSharedPreferences(sharedPrefFile, Context.MODE_PRIVATE)
         val editor: SharedPreferences.Editor =  sharedPreferences.edit()
         val random = Random()
@@ -155,6 +194,8 @@ class OtpActivity : AppCompatActivity() {
         editor.clear()
         editor.apply()
         editor.commit()
+        validationCall = true
+        return validationCall
     }
 
 

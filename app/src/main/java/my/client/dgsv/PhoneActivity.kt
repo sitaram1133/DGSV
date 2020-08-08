@@ -5,6 +5,8 @@ import android.content.Intent
 import android.content.SharedPreferences
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.view.Window
+import android.view.WindowManager
 import com.client.dgsv.R
 import com.google.android.material.snackbar.Snackbar
 import kotlinx.android.synthetic.main.activity_phone.*
@@ -14,13 +16,13 @@ class PhoneActivity : AppCompatActivity() {
     private val sharedPrefFile = "kotlinsharedpref"
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+        requestWindowFeature(Window.FEATURE_NO_TITLE)
+        this.getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN, WindowManager.LayoutParams.FLAG_FULLSCREEN)
         setContentView(R.layout.activity_phone)
 
         fun Random.nextInt(range: IntRange): Int {
             return range.start + nextInt(range.last - range.start)
         }
-
-
 
 
         btnSubmit.setOnClickListener { view ->

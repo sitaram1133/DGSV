@@ -43,18 +43,32 @@
     <string name="settings">Akshay</string>
     <string name="enter_following_details">Enter following Details</string>
     <string name="lastname">Lastname</string>
+    <string name="Sunday" />
+    <string name="Monday" />
+    <string name="Tuesday" />
+    <string name="Wednesday" />
+    <string name="Thursday" />
+    <string name="Friday" />
+    <string name="Saturday" />
 
 
     <string-array name="subjects">
-        <item>Select Sub </item>
-        <item> Sanskrit </item>
-        <item> Marathi </item>
-        <item> English </item>
-        <item> Mathematics</item>
-        <item> Science </item>
-        <item> Geography </item>
-        <item> Hindi </item>
-        <item> History </item>
-        <item> Economics </item>
+        <item>Select Organization </item>
+        <item> D. G. Saraf Vidhyalaya</item>
+        <item> M.R.D. Malpani Vidhyalaya</item>
+        <item> Strowebery School </item>
+
     </string-array>
+
+        <string-array name="planets_array">
+            <item>Mercury</item>
+            <item>Venus</item>
+            <item>Earth</item>
+            <item>Mars</item>
+            <item>Jupiter</item>
+            <item>Saturn</item>
+            <item>Uranus</item>
+            <item>Neptune</item>
+        </string-array>
+
 </resources>

@@ -1,28 +1,51 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:orientation="vertical"
+    android:background="#fff"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
+    <ImageView
+        android:layout_marginTop="50dp"
+        android:padding="15dp"
+        android:layout_gravity="center"
+        android:src="@drawable/optico"
+        android:id="@+id/electronics"
+        android:layout_width="180dp"
+        android:layout_height="180dp"/>
+
 
     <LinearLayout
-        android:layout_margin="20dp"
+        android:elevation="9dp"
+        android:background="#fff"
+        android:layout_margin="50dp"
         android:padding="24dp"
         android:orientation="vertical"
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
 
         <EditText
+            android:background="#F4E6E6"
+            android:inputType="numberDecimal"
+            android:maxLines="1"
+            android:maxLength="6"
+            android:elevation="2dp"
+            android:layout_gravity="center"
             android:id="@+id/editTextCode"
             android:hint="Enter Otp"
             android:layout_marginTop="5dp"
             android:layout_margin="5dp"
             android:padding="10dp"
-            android:layout_width="match_parent"
+            android:layout_width="180dp"
             android:layout_height="wrap_content"/>
 
         <Button
             android:layout_gravity="center"
+            android:textAllCaps="false"
+            android:textSize="18sp"
+            android:background="@drawable/btn_otp_design"
+            android:textColor="@android:color/white"
+            android:elevation="12dp"
             android:id="@+id/btnpushcode"
             android:layout_marginTop="20dp"
             android:text="submit"

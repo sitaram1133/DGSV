@@ -9,15 +9,19 @@
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
-        android:label="@string/app_name"
+        android:label="Urja"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name="my.client.dgsv.OtpActivity"></activity>
+        <activity android:name="my.client.dgsv.NointernetActivity"></activity>
+        <activity android:name="my.client.dgsv.OtpActivity"
+            android:theme="@style/Theme.AppCompat.DayNight.NoActionBar"/>
         <activity
             android:name="my.client.dgsv.PhoneActivity"
             android:theme="@style/Theme.AppCompat.DayNight.NoActionBar" />
-        <activity android:name="my.client.dgsv.RegisterActivity" />
+        <activity android:name="my.client.dgsv.RegisterActivity"
+            android:theme="@style/Theme.AppCompat.DayNight.NoActionBar"
+            />
         <activity
             android:name="my.client.dgsv.Splashnew"
             android:theme="@style/Theme.AppCompat.DayNight.NoActionBar">
@@ -28,7 +32,9 @@
             </intent-filter>
         </activity>
         <activity android:name="my.client.dgsv.TestResult" />
-        <activity android:name="my.client.dgsv.ExamPortal" />
+        <activity
+            android:name="my.client.dgsv.ExamPortal"
+            android:theme="@style/Theme.AppCompat.DayNight.NoActionBar" />
         <activity android:name="my.client.dgsv.MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
