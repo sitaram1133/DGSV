@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:screenOrientation="portrait"
+    android:layout_width="match_parent"
+    android:background="@drawable/profileback"
+    android:orientation="vertical"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:background="#B931134B"
+        android:padding="20dp"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <androidx.cardview.widget.CardView
+            android:elevation="10dp"
+            android:layout_gravity="center"
+            android:id="@+id/myCardView"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            app:cardCornerRadius="50dp">
+            <ImageView
+                android:id="@+id/roundedimage"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:scaleType="centerCrop"
+                />
+            <Button
+                android:id="@+id/modifyimg"
+                android:layout_gravity="bottom|end"
+                android:background="@drawable/mayur3"
+                android:layout_width="55dp"
+                android:layout_height="55dp"/>
+        </androidx.cardview.widget.CardView>
+        <Button
+            android:id="@+id/editbtn"
+            android:layout_gravity="end"
+            android:text="Edit"
+            android:textAllCaps="false"
+            android:textColor="#A47CCB"
+            android:paddingHorizontal="10dp"
+            android:layout_marginHorizontal="55dp"
+            android:background="@drawable/pink_btn"
+            android:drawableStart="@drawable/ic_baseline_edit_24"
+            android:layout_width="wrap_content"
+            android:layout_height="30dp"
+            android:drawableLeft="@drawable/ic_baseline_edit_24" />
+
+        <LinearLayout
+            android:background="@drawable/design_purple"
+            android:elevation="15dp"
+            android:padding="20dp"
+            android:layout_margin="30dp"
+            android:layout_marginTop="30dp"
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:textSize="18sp"
+                android:text="Username"
+                android:id="@+id/Usrname"
+                android:drawablePadding="10dp"
+                android:drawableStart="@drawable/userico"
+                android:layout_marginBottom="15dp"
+                android:padding="5dp"
+                android:textColor="#B882D4"
+                android:textAllCaps="false"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:drawableLeft="@drawable/userico" />
+
+            <TextView
+                android:text="555555555"
+                android:textSize="18sp"
+                android:id="@+id/Usrphone"
+                android:textColor="#B882D4"
+                android:drawablePadding="10dp"
+                android:drawableStart="@drawable/phoneico"
+                android:layout_marginBottom="15dp"
+                android:padding="5dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:drawableLeft="@drawable/phoneico" />
+
+
+
+            <TextView
+                android:drawableStart="@drawable/organization"
+                android:textSize="18sp"
+                android:text="Organizations"
+                android:textColor="#B882D4"
+                android:id="@+id/usrorg"
+                android:drawablePadding="10dp"
+                android:layout_marginBottom="15dp"
+                android:padding="5dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:drawableLeft="@drawable/organization" />
+
+            <TextView
+                android:drawableStart="@drawable/organization"
+                android:drawablePadding="10dp"
+                android:textSize="18sp"
+                android:textColor="#B882D4"
+                android:id="@+id/usrsubject"
+                android:layout_marginBottom="15dp"
+                android:padding="5dp"
+                android:text="Roll Number"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:drawableLeft="@drawable/organization" />
+
+
+            <Button
+                android:id="@+id/btnlogout"
+                android:layout_marginTop="20dp"
+                android:text="Logout"
+                android:textAllCaps="false"
+                android:textSize="18sp"
+                android:textColor="@android:color/white"
+                android:background="@drawable/textfieldshape"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"/>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+
+
+
+
+</LinearLayout>

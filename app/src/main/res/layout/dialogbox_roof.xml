@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:background="#36204E"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+
+    <LinearLayout
+
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <TextView
+            android:layout_margin="30dp"
+            android:layout_marginTop="30dp"
+            android:id="@+id/errorsetter"
+            android:textColor="#fff"
+            android:textSize="18sp"
+            android:text="Connection Error:"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+        <LinearLayout
+            android:layout_marginHorizontal="30dp"
+            android:orientation="horizontal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:layout_gravity="center"
+                android:src="@drawable/refreshico"
+                android:layout_width="50dp"
+                android:layout_height="50dp"/>
+            <Button
+                android:drawableStart="@drawable/icorefresh24"
+                android:id="@+id/btn_refresh"
+                android:drawablePadding="10dp"
+                android:textColor="#D4A3A3"
+                android:background="@drawable/textfieldshape"
+                android:text="Click here to Try Again"
+                android:textAlignment="inherit"
+                android:paddingHorizontal="20dp"
+                android:layout_margin="10dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:drawableLeft="@drawable/icorefresh24" />
+
+
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+
+
+
+</LinearLayout>

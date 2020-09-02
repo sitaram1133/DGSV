@@ -1,7 +1,39 @@
 <component name="ProjectDictionaryState">
   <dictionary name="sai">
     <words>
+      <w>datahelpline</w>
+      <w>defaultname</w>
+      <w>errorcodes</w>
+      <w>firstname</w>
       <w>fullname</w>
+      <w>imageurl</w>
+      <w>intervallist</w>
+      <w>kotlinsharedpref</w>
+      <w>lastname</w>
+      <w>mayur</w>
+      <w>mayurico</w>
+      <w>middlename</w>
+      <w>orgstatus</w>
+      <w>phoneid</w>
+      <w>phonenum</w>
+      <w>phonumlist</w>
+      <w>qlimitlist</w>
+      <w>remotephone</w>
+      <w>rollnumber</w>
+      <w>sharedname</w>
+      <w>sharedorgvalue</w>
+      <w>sharedphone</w>
+      <w>sharedphoneval</w>
+      <w>sharedusr</w>
+      <w>shareduuid</w>
+      <w>sirname</w>
+      <w>splashnew</w>
+      <w>standerd</w>
+      <w>stdphone</w>
+      <w>studentphone</w>
+      <w>totalqtn</w>
+      <w>usrphone</w>
+      <w>vidnyada</w>
     </words>
   </dictionary>
 </component>

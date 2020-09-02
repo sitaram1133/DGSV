@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:background="@drawable/dialogshow"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <TextView
+        android:paddingHorizontal="20dp"
+        android:layout_margin="10dp"
+        android:drawableStart="@drawable/ic_baseline_contact_support_24"
+        android:drawablePadding="10dp"
+        android:text="Support"
+        android:textSize="24sp"
+        android:textColor="@android:color/white"
+        android:textAllCaps="false"
+        android:fontFamily="@font/robotoregular"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:drawableLeft="@drawable/ic_baseline_contact_support_24" />
+
+    <TextView
+        android:textColor="#B8A4D4"
+        android:text="If You have any Issue concern with App \n Please follow!"
+        android:textAlignment="inherit"
+        android:paddingHorizontal="20dp"
+        android:layout_margin="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+
+    <LinearLayout
+        android:padding="5dp"
+        android:background="@drawable/textfieldshape"
+        android:layout_marginHorizontal="20dp"
+        android:layout_gravity="center"
+        android:gravity="left"
+        android:paddingHorizontal="20dp"
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <Button
+            android:background="@drawable/youtube"
+            android:layout_width="60dp"
+            android:layout_height="40dp"/>
+        <TextView
+            android:layout_marginStart="5dp"
+            android:layout_gravity="center"
+            android:textColor="@android:color/white"
+            android:text="@string/for_more_information_n_check_the_link"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dp" />
+    </LinearLayout>
+    <LinearLayout
+        android:layout_marginTop="9dp"
+        android:padding="5dp"
+        android:background="@drawable/facetextline"
+        android:layout_marginHorizontal="20dp"
+        android:layout_gravity="center"
+        android:gravity="left"
+        android:paddingHorizontal="20dp"
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <Button
+            android:background="@drawable/emailbox"
+            android:layout_width="60dp"
+            android:layout_height="54dp"/>
+        <TextView
+            android:layout_marginStart="5dp"
+            android:layout_gravity="center"
+            android:textColor="@android:color/white"
+            android:text="Write Email Us"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dp" />
+    </LinearLayout>
+
+    <EditText
+        android:layout_margin="30dp"
+        android:padding="10dp"
+        android:textColorHint="#B8A4D4"
+        android:background="@drawable/textfieldshape"
+        android:id="@+id/editText"
+        android:inputType="numberDecimal"
+        android:maxLength="2"
+        android:maxLines="1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Descrine the Issue..." />
+
+</LinearLayout>

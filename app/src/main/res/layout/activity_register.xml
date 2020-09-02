@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="#F32B1334"
     android:orientation="vertical"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
@@ -12,153 +12,192 @@
 
         <LinearLayout
             android:id="@+id/seclayout"
-            android:layout_margin="15dp"
-            android:layout_marginHorizontal="30dp"
-            android:padding="9dp"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="vertical">
+            android:layout_margin="15dp"
+            android:layout_marginHorizontal="30dp"
+            android:orientation="vertical"
+            android:padding="9dp">
+
             <TextView
-                android:textSize="18sp"
-                android:textAlignment="center"
-                android:text="@string/enter_following_details"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:gravity="center_horizontal" />
+                android:gravity="center_horizontal"
+                android:text="@string/enter_following_details"
+                android:textColor="#967BB1"
+                android:textAlignment="center"
+                android:textSize="18sp" />
 
 
             <EditText
-                style="@style/AppTheme.ExposedDropdownMenu"
-                android:layout_marginTop="10dp"
-                android:drawablePadding="10dp"
-                android:drawableStart="@drawable/userico"
                 android:id="@+id/firstname"
+                android:layout_width="180dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:background="@drawable/textfieldshape"
+                android:textColor="#fff"
+                android:textColorHint="#BD89D2"
+                android:padding="10dp"
+                android:baselineAligned="false"
+                android:drawableStart="@drawable/userico"
+                android:drawableLeft="@drawable/userico"
+                android:drawablePadding="10dp"
                 android:hint="First Name"
                 android:inputType="textPersonName"
-                android:maxLength="20"
-                android:layout_width="180dp"
-                android:layout_height="wrap_content"
-                android:drawableLeft="@drawable/userico" />
+                android:maxLines="1"
+                android:maxLength="20" />
+
             <EditText
 
-                android:layout_marginTop="10dp"
-                android:drawablePadding="10dp"
-                android:drawableStart="@drawable/userico"
                 android:id="@+id/middlename"
+                android:layout_width="180dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:drawableStart="@drawable/userico"
+                android:drawableLeft="@drawable/userico"
+                android:background="@drawable/textfieldshape"
+                android:textColor="#fff"
+                android:textColorHint="#BD89D2"
+                android:padding="10dp"
+                android:maxLines="1"
+                android:drawablePadding="10dp"
                 android:hint="Middle Name"
                 android:inputType="textPersonName"
-                android:maxLength="20"
+                android:maxLength="20" />
+
+            <EditText
+                android:id="@+id/lastname"
                 android:layout_width="180dp"
                 android:layout_height="wrap_content"
-                android:drawableLeft="@drawable/userico" />
-            <EditText
-                android:layout_marginTop="10dp"
-                android:drawablePadding="10dp"
+                android:layout_marginTop="20dp"
                 android:drawableStart="@drawable/userico"
-                android:id="@+id/lastname"
+                android:drawableLeft="@drawable/userico"
+                android:background="@drawable/textfieldshape"
+                android:textColor="#fff"
+                android:textColorHint="#BD89D2"
+                android:padding="10dp"
+                android:maxLines="1"
+                android:drawablePadding="10dp"
                 android:hint="@string/lastname"
                 android:inputType="textPersonName"
-                android:maxLength="20"
-                android:layout_width="180dp"
+                android:maxLength="20" />
+
+
+
+
+            <LinearLayout
+                android:layout_marginTop="9dp"
+                android:layout_marginBottom="20dp"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:drawableLeft="@drawable/userico" />
+                android:layout_gravity="center"
+                android:orientation="horizontal">
+
+                <EditText
+                    android:id="@+id/address"
+                    android:layout_width="match_parent"
+                    android:layout_marginEnd="10dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:drawableStart="@drawable/ic_baseline_location_on_24"
+                    android:drawableLeft="@drawable/ic_baseline_location_on_24"
+                    android:background="@drawable/textfieldshape"
+                    android:textColor="#fff"
+                    android:textColorHint="#DF9AEB"
+                    android:padding="10dp"
+                    android:drawablePadding="10dp"
+                    android:maxLines="2"
+                    android:hint="Address"
+                    android:inputType="text"
+                    android:layout_marginRight="10dp" />
+            </LinearLayout>
 
 
             <Spinner
-                android:elevation="2dp"
-                android:background="#fff"
-                android:layout_margin="10dp"
-                android:layout_marginTop="25dp"
-                android:id="@+id/planets_spinner"
-                style="@style/MaterialSpinnerItem"
-                android:layout_width="match_parent"
-                android:layout_height="50dp" />
 
-
-            <LinearLayout
-                android:orientation="horizontal"
-                android:layout_gravity="center"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content">
-                <EditText
-                    android:layout_marginTop="10dp"
-                    android:drawablePadding="10dp"
-                    android:drawableStart="@drawable/ic_baseline_location_on_24"
-                    android:id="@+id/address"
-                    android:inputType="text"
-                    android:hint="Address"
-                    android:layout_width="250dp"
-                    android:layout_height="wrap_content"
-                    android:drawableLeft="@drawable/ic_baseline_location_on_24" />
-
-                <Button
-                    android:elevation="9dp"
-                    android:background="@drawable/ic_baseline_location_searching_24"
-                    android:gravity="center"
-                    android:layout_margin="5dp"
-                    android:layout_gravity="center"
-                    android:layout_width="24dp"
-                    android:layout_height="24dp"/>
-
-            </LinearLayout>
-
-
-
-            <EditText
-                android:layout_marginTop="10dp"
-                android:drawablePadding="10dp"
-                android:drawableStart="@drawable/organization"
-                android:id="@+id/rollno"
-                android:inputType="numberDecimal"
-                android:maxLength="3"
-                android:hint="Roll Number"
+                android:layout_margin="0dp"
+                android:background="@drawable/textfieldshape"
+                android:layout_marginHorizontal="10dp"
+                android:id="@+id/spinnerid"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:drawableLeft="@drawable/organization" />
+                />
 
             <LinearLayout
-                android:layout_gravity="top"
-                android:orientation="horizontal"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content">
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:layout_gravity="center"
+                android:orientation="horizontal">
+
                 <EditText
-                    android:drawableStart="@drawable/standerd"
-                    android:drawablePadding="10dp"
-                    android:hint="@string/standerd_class"
+                    android:layout_marginTop="10dp"
                     android:id="@+id/classid"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:drawableLeft="@drawable/standerd" />
-                <TextView
-                    android:gravity="top"
-                    android:layout_gravity="top"
-                    android:text="@string/th"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"/>
+                    android:background="@drawable/textfieldshape"
+                    android:textColor="#fff"
+                    android:padding="10dp"
+                    android:textColorHint="#BD89D2"
+                    android:drawableStart="@drawable/standerd"
+                    android:drawableLeft="@drawable/standerd"
+                    android:drawablePadding="10dp"
+                    android:maxLength="2"
+                    android:maxLines="1"
+                    android:inputType="numberDecimal"
+                    android:hint="std. / class" />
 
+
+                <EditText
+                    android:id="@+id/rollno"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/textfieldshape"
+                    android:textColor="#fff"
+                    android:padding="10dp"
+                    android:textColorHint="#BD89D2"
+                    android:drawableStart="@drawable/standerd"
+                    android:drawableLeft="@drawable/standerd"
+                    android:drawablePadding="10dp"
+                    android:hint="Roll No"
+                    android:inputType="numberDecimal"
+                    android:maxLines="1"
+                    android:maxLength="3"
+                    android:layout_marginLeft="10dp" />
 
             </LinearLayout>
-
+            <ProgressBar
+                android:id="@+id/regprogressbar"
+                android:layout_gravity="center"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                />
 
             <Button
                 android:id="@+id/btnsubmit"
-                android:layout_marginTop="15dp"
-                android:text="Submit"
-                android:layout_gravity="center"
+                android:drawableStart="@drawable/ic_baseline_tag_faces_24"
+                android:padding="10dp"
+                android:background="@drawable/btn_design_white"
+                android:textColor="#351E3E"
                 android:layout_width="wrap_content"
-                android:layout_height="wrap_content"/>
-
-
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="15dp"
+                android:textAllCaps="false"
+                android:text="Submit"
+                android:drawableLeft="@drawable/ic_baseline_tag_faces_24" />
 
 
             <TextView
                 android:id="@+id/alertmessage"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
                 android:layout_marginTop="30dp"
                 android:textAlignment="center"
-                android:layout_gravity="center"
-                android:textColor="@android:color/holo_red_dark"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"/>
+                android:textColor="@android:color/white" />
 
         </LinearLayout>
     </ScrollView>

@@ -3,7 +3,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="my.client.dgsv.ExamPortal">
+    android:background="@android:color/white"
+    tools:context="akshay.client.exam.ExamPortal">
     <LinearLayout
         android:orientation="vertical"
         android:layout_above="@+id/btn_next"

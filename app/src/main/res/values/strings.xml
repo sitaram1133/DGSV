@@ -50,6 +50,18 @@
     <string name="Thursday" />
     <string name="Friday" />
     <string name="Saturday" />
+    <string name="spinner_title">Akshay</string>
+    <string name="for_more_information_n_check_the_link">For more Information \n Check the link</string>
+    <string name="dialogTitle">Log Out</string>
+    <string name="dialogMessage">Are you sure want to Log out?</string>
+    <string name="channel_name">Akshay</string>
+    <string name="channel_description">this is my gcmy channel</string>
+    <string name="enter_phone_number_here_to_n_login_signup">Enter Phone Number here to \n Login / Signup</string>
+    <string name="logo_of_project">logo of project</string>
+    <string name="enter_your_phone">Enter Your Phone</string>
+    <string name="enter_id">Enter id</string>
+    <string name="vidnyada_client">Vidnyada Client</string>
+    <string name="mtptl">mtptl</string>
 
 
     <string-array name="subjects">
@@ -60,15 +72,15 @@
 
     </string-array>
 
-        <string-array name="planets_array">
-            <item>Mercury</item>
-            <item>Venus</item>
-            <item>Earth</item>
-            <item>Mars</item>
-            <item>Jupiter</item>
-            <item>Saturn</item>
-            <item>Uranus</item>
-            <item>Neptune</item>
-        </string-array>
+    <string-array name="planets_array">
+        <item>Mercury</item>
+        <item>Venus</item>
+        <item>Earth</item>
+        <item>Mars</item>
+        <item>Jupiter</item>
+        <item>Saturn</item>
+        <item>Uranus</item>
+        <item>Neptune</item>
+    </string-array>
 
 </resources>

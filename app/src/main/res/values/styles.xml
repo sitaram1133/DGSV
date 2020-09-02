@@ -51,11 +51,12 @@
         <item name="android:textSize">20sp</item>
     </style>
 
-    <!-- style for material spinner 'item' layout -->
+    <!-- style for material spinner 'item' layoutspin -->
     <style name="MaterialSpinnerItem" parent="Widget.AppCompat.TextView">
-        <item name="android:color">@color/material_spinner_box</item>
-        <item name="android:textColor">@color/material_spinner_box</item>
-        <item name="android:textSize">18sp</item>
+        <item name="android:color">@color/ic_banner_background</item>
+        <item name="android:textColor">@color/ic_banner_background</item>
+        <item name="android:drawableStart">@drawable/organization</item>
+        <item name="android:textSize">16sp</item>
         <item name="android:ellipsize">end</item>
         <item name="android:maxLines">1</item>
         <item name="android:padding">12dp</item>
@@ -63,7 +64,7 @@
 
     <color name="transparent">#C3FFFFFF</color>
     <color name="colorOnSurface">#F14040</color>
-    <color name="material_spinner_box">#0073FF</color>
+    <color name="material_spinner_box">#A60073FF</color>
     <color name="colorPrimaryVariant">#190119</color>
 
 

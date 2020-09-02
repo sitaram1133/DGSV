@@ -14,23 +14,24 @@
             android:layout_marginTop="25dp"
             android:layout_gravity="center"
             android:id="@+id/mayurico"
-            android:src="@drawable/mayur3"
+            android:src="@drawable/ganesh999"
             android:layout_width="150dp"
             android:layout_height="150dp"/>
 
         <TextView
-            android:textSize="30sp"
-            android:textStyle="bold"
-            android:textColor="@android:color/white"
+            android:layout_marginTop="25dp"
+            android:textSize="27sp"
+            android:textColor="#DEB9E8"
             android:textAlignment="center"
-            android:text="MayurPankh"
+            android:fontFamily="@font/nice_font_family"
+            android:text="@string/vidnyada_client"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:gravity="center_horizontal" />
 
         <TextView
             android:textSize="18sp"
-            android:textColor="@android:color/white"
+            android:textColor="#A38ED2"
             android:textAlignment="center"
             android:text="Online Examportal"
             android:layout_width="match_parent"
